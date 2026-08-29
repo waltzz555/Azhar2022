@@ -117,6 +117,31 @@
   .nav-right .btn::after{ content:'→'; font-size:1rem; line-height:1; transition:transform .18s ease; }
   .nav-right .btn:hover{ background:#3a79e5; transform:translateY(-1px); }
   .nav-right .btn:hover::after{ transform:translateX(3px); }
+  .menu-toggle{
+    display:none; width:44px; height:44px; flex:0 0 44px; padding:0;
+    place-items:center; border:1px solid rgba(134,174,229,.34); border-radius:6px;
+    background:rgba(255,255,255,.035); color:#fff; cursor:pointer;
+  }
+  .menu-toggle-box{ display:grid; gap:5px; width:19px; }
+  .menu-toggle-box span{ display:block; width:100%; height:2px; border-radius:2px; background:currentColor; transition:transform .2s ease,opacity .2s ease; }
+  .menu-toggle[aria-expanded="true"] .menu-toggle-box span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] .menu-toggle-box span:nth-child(2){ opacity:0; }
+  .menu-toggle[aria-expanded="true"] .menu-toggle-box span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  @media(max-width:979px){
+    .nav{ gap:10px; }
+    .menu-toggle{ display:grid; margin-left:auto; }
+    .navlinks{
+      position:fixed; top:78px; left:0; right:0; z-index:99; display:flex; flex-direction:column;
+      align-items:stretch; gap:0; max-height:0; overflow:hidden; visibility:hidden; opacity:0;
+      color:rgba(239,245,252,.82); background:rgba(7,27,49,.985);
+      border-bottom:1px solid rgba(141,177,224,.24); box-shadow:0 24px 42px -28px rgba(2,14,29,.95);
+      transform:translateY(-8px); transition:max-height .28s ease,opacity .2s ease,transform .2s ease,visibility .2s;
+    }
+    .navlinks.is-open{ max-height:340px; visibility:visible; opacity:1; transform:none; }
+    .navlinks a{ width:100%; min-height:54px; height:auto; padding:0 24px; border-top:1px solid rgba(255,255,255,.07); }
+    .navlinks a::after{ left:24px; right:auto; bottom:0; width:54px; }
+    body.menu-open{ overflow:hidden; }
+  }
   @media(max-width:560px){
     .nav{ height:70px; }
     .logo img{ height:34px; }
@@ -125,6 +150,7 @@
     .nav-right{ padding-left:12px; }
     .nav-right .btn{ min-height:40px; padding:9px 12px; font-size:.75rem; }
     .nav-right .btn::after{ display:none; }
+    .navlinks{ top:70px; }
   }
   .btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -652,6 +678,128 @@
   @media(prefers-reduced-motion:reduce){
     .reveal-up{ opacity:1!important; transform:none!important; }
   }
+
+  /* ---------- MOBILE EXPERIENCE ---------- */
+  @media(max-width:819px){
+    body{ overflow-x:hidden; font-size:15px; }
+    html{ scroll-padding-top:78px; }
+    section{ padding:68px 0; }
+    .hero{ padding:126px 0 64px; }
+    .hero-grid{ grid-template-columns:1fr; gap:38px; }
+    .hero-grid > div:first-child{ max-width:620px; }
+    .hero h1{ max-width:13ch; font-size:clamp(2.55rem,10vw,4.35rem); }
+    .hero-sub{ margin-top:18px; font-size:.98rem; }
+    .hero-cta{ margin-top:25px; gap:10px; }
+    .hero-cta .btn{ min-height:48px; justify-content:center; }
+    .route-section{ padding:28px 0; }
+    .route-head{ padding:14px 16px; }
+    .route-strip{ padding:26px 16px 22px; overscroll-behavior-inline:contain; scrollbar-width:thin; }
+    .route-line{ min-width:560px; }
+    .route-foot{ padding:14px 16px; }
+    .sec-head{ align-items:flex-start; flex-direction:column; gap:12px; margin-bottom:30px; }
+    .sec-head p{ max-width:58ch; }
+    .trust-bar{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .trust-item{ padding:28px 20px; }
+    .trust-val{ font-size:2.15rem; }
+    .trust-desc{ font-size:.76rem; }
+    .flagship-body{ padding:22px 22px 25px; }
+    .flagship-body h3{ font-size:1.7rem; }
+    .about-grid{ gap:34px; }
+    .route-visual{ justify-self:center; }
+    .contact-stage{ gap:32px; }
+    .location-copy h3{ max-width:14ch; }
+    .requisites{ margin-top:34px; padding:24px; }
+  }
+
+  @media(max-width:620px){
+    .wrap{ padding-left:16px; padding-right:16px; }
+    section{ padding:56px 0; }
+    .hero{ padding:112px 0 52px; }
+    .hero-tag{ margin-bottom:14px; }
+    .hero-tag .eyebrow{ font-size:.62rem; line-height:1.55; }
+    .hero h1{ font-size:clamp(2.45rem,13vw,3.45rem); line-height:.94; }
+    .hero-sub{ font-size:.92rem; line-height:1.62; }
+    .hero-cta{ display:grid; grid-template-columns:1fr 1fr; }
+    .hero-cta .btn{ width:100%; padding:12px 10px; font-size:.78rem; }
+    .hero-doc .hero-photo{ aspect-ratio:4/3; }
+    .route-head .doc-id{ font-size:.62rem; }
+    .route-head .doc-status{ font-size:.61rem; }
+    .route-foot{ display:grid; grid-template-columns:1fr; font-size:.65rem; }
+    .trust-bar{ grid-template-columns:1fr; }
+    .trust-item{ padding:24px 20px; border-left:0; border-top:1px solid var(--line-soft); }
+    .trust-item:first-child{ border-top:0; }
+    .trust-desc{ max-width:42ch; }
+    .flagship-grid{ gap:16px; }
+    .flagship-card{ border-radius:10px; }
+    .flagship-visual{ aspect-ratio:16/10; }
+    .autopark{ padding:38px 0 56px; }
+    .autopark-grid{ gap:8px; padding:8px; border-radius:14px; }
+    .autopark-feature{ height:430px; }
+    .autopark-feature-top{ left:22px; right:22px; top:22px; font-size:.8rem; }
+    .autopark-feature-bottom{ left:22px; right:22px; bottom:22px; }
+    .autopark-feature-bottom h3{ font-size:2rem; margin-bottom:18px; }
+    .autopark-quote{ min-height:330px; }
+    .autopark-quote blockquote{ margin:24px 0; font-size:1.12rem; }
+    .autopark-service{ min-height:240px; }
+    .autopark-secondary{ height:240px; }
+    .fact-row{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+    .fact{ min-width:0; padding:13px 10px; }
+    .fact .val{ font-size:1.75rem; }
+    .fact .lbl{ font-size:.69rem; }
+    .contact-stage{ padding:22px; border-radius:16px; }
+    .contact-index{ margin-bottom:20px; }
+    .contact-intro h2{ font-size:2.55rem; }
+    .contact-lead{ margin:18px 0 24px; font-size:.9rem; }
+    .contact-form-shell{ padding:20px; border-radius:13px; }
+    .contact-form-head{ margin-bottom:22px; padding-bottom:18px; }
+    .contact-form-shell .field input,.contact-form-shell .field textarea{ min-height:48px; font-size:16px; }
+    .contact-location{ border-radius:13px; }
+    .location-copy{ gap:20px; padding:22px; }
+    .map-card iframe{ height:230px; }
+    .requisites{ padding:20px; border-radius:10px; }
+    .requisites-head{ align-items:flex-start; flex-direction:column; gap:8px; }
+    .req-item{ padding:14px 0; }
+    footer{ padding:34px 0; }
+    .foot-row{ align-items:flex-start; flex-direction:column; }
+  }
+
+  @media(max-width:430px){
+    .nav{ gap:7px; }
+    .logo img{ height:31px; }
+    .logo .logo-text{ display:none; }
+    .menu-toggle{ width:40px; height:40px; flex-basis:40px; }
+    .nav-right{ padding-left:0; border-left:0; }
+    .nav-right .btn{ min-height:40px; padding:9px 11px; font-size:0; }
+    .nav-right .btn::before{ content:'Заявка'; font-size:.72rem; }
+    .hero-cta{ grid-template-columns:1fr; }
+    .media-meta{ display:grid; grid-template-columns:1fr auto; gap:6px 10px; }
+    .media-meta span:nth-child(2){ display:none; }
+    .route-line{ min-width:510px; }
+    .flagship-body{ padding:20px; }
+    .autopark-feature{ height:400px; }
+    .autopark-quote,.autopark-service{ padding:24px 20px; }
+    .contact-stage{ margin-left:-6px; margin-right:-6px; padding:20px 16px; }
+    .contact-index{ font-size:.52rem; }
+    .contact-intro h2{ font-size:2.3rem; }
+    .contact-channel{ grid-template-columns:38px minmax(0,1fr) auto; gap:11px; }
+    .contact-channel-mark{ width:38px; height:38px; }
+    .contact-channel-copy strong{ font-size:.78rem; }
+    .contact-form-shell{ padding:18px 14px; }
+    .contact-form-head{ grid-template-columns:34px 1fr; gap:11px; }
+    .contact-form-number{ width:34px; height:34px; }
+    .contact-form-head h3{ font-size:1.65rem; }
+    .location-copy{ padding:20px 18px; }
+    .map-card{ margin:8px; }
+    .map-card .tag{ left:14px; top:14px; font-size:.57rem; }
+    .map-card iframe{ height:210px; }
+    .map-card .map-foot{ padding:12px 13px; font-size:.58rem; }
+    .photo-card-copy{ gap:8px; }
+    .photo-card-copy span{ font-size:.53rem; }
+  }
+
+  @media(hover:none){
+    .btn:hover,.flagship-card:hover,.autopark-feature:hover img,.autopark-secondary:hover img,.photo-card:hover img{ transform:none; }
+  }
 </style>
 </head>
 <body id="top">
@@ -665,13 +813,16 @@
         <span class="logo-text">AZHAR2022 <span>KZ</span></span>
       </a>
     </div>
-    <nav class="navlinks" aria-label="Главное меню">
+    <nav class="navlinks" id="main-navigation" aria-label="Главное меню">
       <a href="#top" data-nav="home">Главная</a>
       <a href="#services-preview" data-nav="services">Услуги</a>
       <a href="#about" data-nav="about">О компании</a>
       <a href="#contacts" data-nav="contacts">Контакты</a>
       <a href="#requisites" data-nav="requisites">Реквизиты</a>
     </nav>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation">
+      <span class="menu-toggle-box" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
     <div class="nav-right">
       <a href="#contacts" class="btn">Оставить заявку</a>
     </div>
@@ -819,7 +970,7 @@
   <div class="wrap">
     <div class="autopark-grid">
       <article class="autopark-card autopark-feature">
-        <img src="assets/fleet-two-trucks.jpg" alt="Два грузовых автомобиля собственного автопарка AZHAR2022">
+        <img src="assets/fleet-two-trucks.jpg" alt="Два грузовых автомобиля собственного автопарка AZHAR2022" loading="lazy" decoding="async">
         <p class="autopark-feature-top">Собственный транспорт, регулярное обслуживание и прозрачный контроль каждого рейса.</p>
         <div class="autopark-feature-bottom">
           <h3>Фуры, которым мы доверяем ваши грузы</h3>
@@ -846,7 +997,7 @@
       </article>
 
       <figure class="autopark-card autopark-secondary">
-        <img src="assets/fleet-mercedes-wide.jpg" alt="Грузовой автомобиль Mercedes компании AZHAR2022">
+        <img src="assets/fleet-mercedes-wide.jpg" alt="Грузовой автомобиль Mercedes компании AZHAR2022" loading="lazy" decoding="async">
       </figure>
     </div>
   </div>
@@ -860,11 +1011,11 @@
     </div>
     <div class="photo-grid">
       <article class="photo-card">
-        <img src="assets/fleet-scania-terminal-v2.png" alt="Грузовой автомобиль Scania компании AZHAR2022 на территории логистического терминала" loading="lazy">
+        <img src="assets/fleet-scania-terminal-v2.png" alt="Грузовой автомобиль Scania компании AZHAR2022 на территории логистического терминала" loading="lazy" decoding="async">
         <div class="photo-card-copy"><span>Тип: <b>грузоперевозка</b></span><span>Контроль: <b>GPS 24/7</b></span><span>Статус: <b>готова</b></span></div>
       </article>
       <article class="photo-card">
-        <img src="assets/fleet-daf-terminal-v2.png" alt="Грузовой автомобиль DAF компании AZHAR2022 на территории логистического терминала" loading="lazy">
+        <img src="assets/fleet-daf-terminal-v2.png" alt="Грузовой автомобиль DAF компании AZHAR2022 на территории логистического терминала" loading="lazy" decoding="async">
         <div class="photo-card-copy"><span>Тип: <b>грузоперевозка</b></span><span>Страхование: <b>оформлено</b></span><span>GPS: <b>вкл.</b></span></div>
       </article>
     </div>
@@ -1019,6 +1170,27 @@
 (function(){
   try{ document.body.classList.add('page-enter'); }catch(e){}
 
+  const navMenu = document.querySelector('.navlinks');
+  const menuToggle = document.querySelector('.menu-toggle');
+  function closeMenu(){
+    if(!navMenu || !menuToggle) return;
+    navMenu.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded','false');
+    menuToggle.setAttribute('aria-label','Открыть меню');
+    document.body.classList.remove('menu-open');
+  }
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener('click',()=>{
+      const willOpen = !navMenu.classList.contains('is-open');
+      navMenu.classList.toggle('is-open',willOpen);
+      menuToggle.setAttribute('aria-expanded',String(willOpen));
+      menuToggle.setAttribute('aria-label',willOpen ? 'Закрыть меню' : 'Открыть меню');
+      document.body.classList.toggle('menu-open',willOpen);
+    });
+    document.addEventListener('keydown',e=>{ if(e.key === 'Escape') closeMenu(); });
+    window.addEventListener('resize',()=>{ if(window.innerWidth >= 980) closeMenu(); });
+  }
+
   const navLinks = document.querySelectorAll('.navlinks a');
   function updateActive(){
     const cur = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -1110,7 +1282,7 @@
   navLinks.forEach(a=>{
     a.addEventListener('click', function(e){
       const href = a.getAttribute('href') || '';
-      if(href.startsWith('#')) return;
+      if(href.startsWith('#')){ closeMenu(); return; }
       if(href.includes('#')) return;
       if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
       e.preventDefault();
