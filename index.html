@@ -7,7 +7,7 @@
 <meta name="description" content="AZHAR2022 — транспортная компания: грузоперевозки по Казахстану, Китаю и всей Европе, доставка автомобилей из Европы «под ключ», поставка автозапчастей по VIN.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff;
@@ -32,7 +32,7 @@
   body{
     background:var(--bg);
     color:var(--text);
-    font-family:'Inter',sans-serif;
+    font-family:'Manrope',sans-serif;
     font-size:16px;
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
@@ -45,17 +45,18 @@
   ::selection{ background:var(--amber); color:#fff; }
 
   h1,h2,h3{
-    font-family:'Bebas Neue',sans-serif;
-    font-weight:400;
-    letter-spacing:.02em;
-    line-height:1;
-    text-transform:uppercase;
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    letter-spacing:-.035em;
+    line-height:1.08;
+    text-transform:none;
   }
   .mono{ font-family:'JetBrains Mono',monospace; }
   .eyebrow{
-    font-family:'JetBrains Mono',monospace;
-    font-size:.72rem;
-    letter-spacing:.18em;
+    font-family:'Manrope',sans-serif;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.13em;
     text-transform:uppercase;
     color:var(--amber);
   }
@@ -190,7 +191,7 @@
   @media(min-width:920px){ .hero-grid{ grid-template-columns:minmax(0,1.15fr) minmax(420px,500px); gap:56px; } }
   .hero-tag{ display:flex; align-items:center; gap:10px; margin-bottom:20px; }
   .hero-tag .dot{ width:6px; height:6px; background:var(--amber); border-radius:50%; flex-shrink:0; }
-  .hero h1{ font-size:clamp(2.2rem,4.4vw,3.4rem); max-width:16ch; color:var(--text); letter-spacing:-.018em; }
+  .hero h1{ font-size:clamp(2.2rem,4.4vw,3.55rem); max-width:17ch; color:var(--text); font-weight:800; letter-spacing:-.052em; line-height:1.02; }
   .hero h1 em{ font-style:normal; color:var(--amber); }
   .hero-sub{ margin-top:22px; max-width:52ch; font-size:1.05rem; line-height:1.72; color:var(--text-dim); }
   .hero-cta{ margin-top:32px; display:flex; gap:16px; flex-wrap:wrap; }
@@ -261,7 +262,7 @@
   section{ padding:96px 0; border-bottom:1px solid var(--line-soft); }
   .route-section{ padding:40px 0; }
   .sec-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:52px; flex-wrap:wrap; }
-  .sec-head h2{ font-size:clamp(2rem,4vw,2.9rem); }
+  .sec-head h2{ font-size:clamp(1.9rem,3.4vw,2.75rem); letter-spacing:-.045em; }
   .sec-head p{ max-width:40ch; color:var(--text-dim); font-size:.96rem; }
 
   /* ---------- KAZAKH ORNAMENT BACKGROUNDS ---------- */
@@ -298,8 +299,8 @@
   .trust-bar{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); }
   .trust-item{ padding:40px 32px; border-left:1px solid var(--line-soft); }
   .trust-item:first-child{ border-left:none; }
-  .trust-val{ font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:var(--text); line-height:1; }
-  .trust-lbl{ font-size:.86rem; color:var(--text-dim); margin:8px 0 12px; font-weight:500; }
+  .trust-val{ font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.25rem; color:var(--text); line-height:1; letter-spacing:-.05em; }
+  .trust-lbl{ font-size:.88rem; color:var(--text-dim); margin:8px 0 12px; font-weight:700; }
   .trust-desc{ font-size:.83rem; color:var(--text-faint); max-width:26ch; }
 
   /* ---------- FLAGSHIP SERVICES (photo cards) ---------- */
@@ -323,8 +324,8 @@
     color:var(--text-dim); background:rgba(255,255,255,.85); padding:3px 8px; border:1px solid var(--line); border-radius:20px;
   }
   .flagship-body{ padding:26px 28px 30px; }
-  .flagship-body h3{ font-family:'Bebas Neue',sans-serif; font-size:1.8rem; margin:10px 0 12px; }
-  .flagship-body p{ color:var(--text-dim); font-size:.93rem; margin-bottom:18px; }
+  .flagship-body h3{ font-family:'Montserrat',sans-serif; font-size:1.5rem; font-weight:700; letter-spacing:-.035em; margin:10px 0 12px; }
+  .flagship-body p{ color:var(--text-dim); font-size:.93rem; line-height:1.7; margin-bottom:18px; }
   .flagship-link{ font-family:'JetBrains Mono',monospace; font-size:.8rem; color:var(--amber); display:inline-flex; align-items:center; gap:6px; }
 
   /* ---------- AUTOPARK — MODULAR GRID ---------- */
@@ -344,7 +345,7 @@
   .autopark-feature-top{ position:absolute; z-index:2; left:36px; top:34px; max-width:27ch; font-size:.9rem; line-height:1.5; font-weight:600; }
   .autopark-feature-top::after{ content:""; display:block; width:8px; height:8px; margin-top:18px; border-radius:50%; background:#2e6fe0; }
   .autopark-feature-bottom{ position:absolute; z-index:2; left:36px; right:36px; bottom:34px; }
-  .autopark-feature-bottom h3{ max-width:18ch; margin-bottom:22px; font-family:'Inter',sans-serif; font-size:clamp(1.8rem,3.1vw,3rem); line-height:1.12; letter-spacing:-.04em; }
+  .autopark-feature-bottom h3{ max-width:18ch; margin-bottom:22px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:clamp(1.65rem,2.7vw,2.65rem); line-height:1.14; letter-spacing:-.045em; }
   .autopark-quote{ grid-row:1/3; padding:38px 40px; display:flex; flex-direction:column; justify-content:space-between; }
   .autopark-number strong{ display:block; font-size:2.2rem; line-height:1; }
   .autopark-number span{ display:block; margin-top:8px; max-width:24ch; color:#7b8188; font-size:.77rem; line-height:1.35; }
@@ -352,7 +353,7 @@
   .autopark-signature strong{ display:block; font-size:.9rem; }
   .autopark-signature span{ color:#8a9097; font-size:.72rem; }
   .autopark-service{ padding:34px 36px; display:flex; flex-direction:column; align-items:flex-start; }
-  .autopark-service h3{ margin-bottom:10px; font-family:'Inter',sans-serif; font-size:1.45rem; line-height:1.1; letter-spacing:-.02em; }
+  .autopark-service h3{ margin-bottom:10px; font-family:'Montserrat',sans-serif; font-size:1.32rem; line-height:1.15; letter-spacing:-.035em; }
   .autopark-service p{ color:#626970; font-size:.88rem; line-height:1.55; }
   .autopark-service .btn{ margin-top:auto; }
   .autopark-action{
@@ -419,7 +420,7 @@
   .about-text p{ color:var(--text-dim); font-size:1rem; margin:16px 0 28px; max-width:72ch; }
   .fact-row{ display:flex; gap:14px; flex-wrap:wrap; }
   .fact{ border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; min-width:120px; }
-  .fact .val{ font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--amber); line-height:1; }
+  .fact .val{ font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.85rem; color:var(--amber); line-height:1; letter-spacing:-.045em; }
   .fact .lbl{ font-size:.78rem; color:var(--text-dim); margin-top:6px; }
   .route-visual{
     width:min(100%,450px); justify-self:end; position:relative; overflow:hidden;
@@ -519,7 +520,7 @@
   .contact-intro,.contact-form-shell{ position:relative; z-index:1; }
   .contact-index{ display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:26px; font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:#91add0; }
   .contact-index b{ color:#78a9ff; font-size:.72rem; }
-  .contact-intro h2{ max-width:11ch; font-size:clamp(2.8rem,5.6vw,5.2rem); line-height:.9; letter-spacing:.005em; }
+  .contact-intro h2{ max-width:13ch; font-size:clamp(2.55rem,5vw,4.65rem); line-height:.98; letter-spacing:-.055em; }
   .contact-intro h2 em{ display:block; margin-top:8px; color:#73a8ff; font-style:normal; }
   .contact-lead{ max-width:48ch; margin:24px 0 30px; color:#b8c8dc; font-size:.98rem; }
   .contact-channels{ border-top:1px solid rgba(255,255,255,.14); }
@@ -550,7 +551,7 @@
   .contact-form-shell .field label{ color:#60748e; font-family:'JetBrains Mono',monospace; font-size:.62rem; font-weight:600; letter-spacing:.09em; text-transform:uppercase; }
   .contact-form-shell .field input,.contact-form-shell .field textarea{
     width:100%; padding:14px 15px; border:1px solid #ccdaea; border-radius:8px;
-    background:#f2f6fb; color:var(--text); font-family:'Inter',sans-serif; font-size:.92rem;
+    background:#f2f6fb; color:var(--text); font-family:'Manrope',sans-serif; font-size:.92rem;
     transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
   }
   .contact-form-shell .field input:focus,.contact-form-shell .field textarea:focus{ outline:none; border-color:#6899e9; background:#fff; box-shadow:0 0 0 4px rgba(46,111,224,.1); }
@@ -678,7 +679,7 @@
   .foot-row{ position:relative; z-index:1; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-size:.82rem; color:var(--text-faint); }
   .foot-brand{ display:flex; align-items:center; gap:12px; color:var(--text-dim); }
   .foot-brand img{ height:36px; }
-  .foot-brand strong{ font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:.04em; color:var(--text); display:block; }
+  .foot-brand strong{ font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; letter-spacing:-.015em; color:var(--text); display:block; }
 
   /* Scroll reveal — inspired by the reference site's upward entrance rhythm */
   .reveal-up{
@@ -1025,29 +1026,29 @@
       <div class="hero-copy">
         <div class="hero-tag">
           <span class="dot"></span>
-          <span class="eyebrow">Надёжная логистика из Казахстана</span>
+          <span class="eyebrow">Казахстан · Китай · вся Европа</span>
         </div>
-        <h1>Груз в пути. <em>Вы — спокойны.</em></h1>
-        <p class="hero-sub">Грузовые перевозки по Казахстану, Китаю и Европе, доставка автомобилей и подбор автозапчастей. Продумываем маршрут, остаёмся на связи и сопровождаем заказ до места назначения.</p>
+        <h1>Казахстан, Китай и Европа — <em>ваш груз</em> дойдёт точно в срок.</h1>
+        <p class="hero-sub">AZHAR2022 организует грузоперевозки по Казахстану, Китаю и всей Европе, доставку автомобилей из Европы «под ключ» и поставки автозапчастей с подбором по VIN и гарантией.</p>
         <div class="hero-cta">
-          <a class="btn" href="#contacts">Получить расчёт</a>
-          <a class="btn btn-outline" href="#services-preview">Узнать об услугах</a>
+          <a class="btn" href="#services-preview">Наши услуги</a>
+          <a class="btn btn-outline" href="#contacts">Оставить заявку</a>
         </div>
       </div>
 
       <div class="hero-art">
         <div class="hero-doc">
         <div class="route-head">
-          <span class="doc-id mono">МЕЖДУНАРОДНЫЙ МАРШРУТ</span>
-          <span class="doc-status">на связи</span>
+          <span class="doc-id mono">ЗАЯВКА № AZ-2022-0847</span>
+          <span class="doc-status">в пути</span>
         </div>
         <div class="hero-photo">
           <img src="assets/fleet-daf-hero-straight.jpg" alt="Фура DAF компании AZHAR2022 на территории логистического терминала" width="1085" height="1356" fetchpriority="high" decoding="async">
         </div>
         <div class="route-foot">
-          <span>НАПРАВЛЕНИЯ: <b>KZ · CN · EU</b></span>
-          <span>КОНТРОЛЬ: <b>GPS 24/7</b></span>
-          <span>СТАТУС: <b>в работе</b></span>
+          <span>ТИП: <b>Грузоперевозка</b></span>
+          <span>СТРАХОВАНИЕ: <b>оформлено</b></span>
+          <span>GPS: <b>вкл.</b></span>
         </div>
         </div>
       </div>
@@ -1096,17 +1097,17 @@
       <div class="trust-item">
         <div class="trust-val">15</div>
         <div class="trust-lbl">лет опыта команды</div>
-        <div class="trust-desc">Опыт, который помогает заранее учитывать важные детали маршрута.</div>
+        <div class="trust-desc">Практический опыт в грузоперевозках и международной логистике.</div>
       </div>
       <div class="trust-item">
         <div class="trust-val">3</div>
         <div class="trust-lbl">ключевых направления</div>
-        <div class="trust-desc">Казахстан, Китай и Европа — внутренние и международные перевозки.</div>
+        <div class="trust-desc">Казахстан, Китай и вся Европа.</div>
       </div>
       <div class="trust-item">
         <div class="trust-val">24/7</div>
         <div class="trust-lbl">поддержка</div>
-        <div class="trust-desc">Следим за маршрутом и остаёмся на связи на каждом этапе.</div>
+        <div class="trust-desc">Постоянный контроль груза и связь с клиентом на всех этапах.</div>
       </div>
     </div>
   </div>
@@ -1115,8 +1116,8 @@
 <section id="services-preview">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Всё необходимое — в одном маршруте</h2>
-      <p>Три направления, одна команда и понятная ответственность за результат.</p>
+      <h2>Что мы делаем</h2>
+      <p>Три направления, на которых строится работа компании.</p>
     </div>
     <div class="flagship-grid">
       <article class="flagship-card">
@@ -1127,7 +1128,7 @@
         <div class="flagship-body">
           <span class="eyebrow">Автотранспорт</span>
           <h3>Грузоперевозки</h3>
-          <p>Подбираем транспорт под задачу, организуем страхование и таможенное сопровождение, контролируем движение груза на всём пути.</p>
+          <p>Сборные и генеральные грузы, страхование, таможенное сопровождение и GPS-трекинг на всём маршруте.</p>
         </div>
       </article>
       <article class="flagship-card">
@@ -1138,7 +1139,7 @@
         <div class="flagship-body">
           <span class="eyebrow">Доставка авто</span>
           <h3>Авто из Европы</h3>
-          <p>Сопровождаем покупку и доставку автомобиля из Европы: проверка по VIN, перевозка, документы и растаможка.</p>
+          <p>Подбор, проверка по VIN, доставка и растаможка — полное сопровождение автомобиля «под ключ».</p>
         </div>
       </article>
       <article class="flagship-card">
@@ -1149,7 +1150,7 @@
         <div class="flagship-body">
           <span class="eyebrow">Запчасти</span>
           <h3>Автозапчасти</h3>
-          <p>Находим оригинальные детали и надёжные аналоги по VIN, организуем доставку без лишних посредников.</p>
+          <p>Оригиналы и качественные аналоги, подбор по VIN и быстрая доставка вместе с грузом.</p>
         </div>
       </article>
     </div>
@@ -1161,9 +1162,9 @@
     <div class="autopark-grid">
       <article class="autopark-card autopark-feature">
         <img src="assets/fleet-two-trucks.jpg" alt="Два грузовых автомобиля собственного автопарка AZHAR2022" width="1215" height="911" loading="lazy" decoding="async">
-        <p class="autopark-feature-top">Собственные автомобили проходят регулярное обслуживание и проверку перед каждым выездом.</p>
+        <p class="autopark-feature-top">Собственный транспорт, регулярное обслуживание и прозрачный контроль каждого рейса.</p>
         <div class="autopark-feature-bottom">
-          <h3>Надёжная техника для важных грузов</h3>
+          <h3>Фуры, которым мы доверяем ваши грузы</h3>
           <a href="#contacts" class="btn autopark-action autopark-action-primary"><span class="autopark-action-mark">→</span><span>Заказать расчёт</span></a>
         </div>
       </article>
@@ -1173,7 +1174,7 @@
           <strong>15 лет</strong>
           <span>опыта команды в логистике и международных перевозках</span>
         </div>
-        <blockquote>Когда транспорт свой, проще отвечать за график, состояние машины и качество каждой перевозки.</blockquote>
+        <blockquote>Собственный автопарк помогает быстрее согласовывать рейсы, контролировать сроки и отвечать за состояние транспорта.</blockquote>
         <div class="autopark-signature">
           <strong>Команда AZHAR2022</strong>
           <span>Казахстан · Китай · Европа</span>
@@ -1182,7 +1183,7 @@
 
       <article class="autopark-card autopark-service">
         <h3>Контроль груза 24/7</h3>
-        <p>Отслеживаем маршрут по GPS и остаёмся на связи с клиентом на протяжении всей перевозки.</p>
+        <p>Техническая проверка перед выездом, GPS-мониторинг маршрута, страхование и постоянная связь с клиентом.</p>
         <a href="#services-preview" class="btn autopark-action autopark-action-secondary"><span class="autopark-action-mark">→</span><span>Все услуги</span></a>
       </article>
 
@@ -1196,8 +1197,8 @@
 <section class="photo-gallery" id="fleet-gallery">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Транспорт в работе</h2>
-      <p>Автомобили AZHAR2022 для внутренних и международных маршрутов.</p>
+      <h2>Наш транспорт</h2>
+      <p>Реальные фотографии автомобилей AZHAR2022, которые работают на внутренних и международных направлениях.</p>
     </div>
     <div class="photo-grid">
       <article class="photo-card">
@@ -1218,7 +1219,7 @@
       <div class="about-text">
         <span class="eyebrow">О компании</span>
         <h2 style="font-size:clamp(2rem,4vw,2.9rem);margin-top:10px">AZHAR2022</h2>
-        <p>ТОО «АЖАР 2022» — логистическая компания из Алматинской области. Мы ценим ясные договорённости, бережное отношение к грузу и спокойную коммуникацию. Заранее продумываем маршрут и остаёмся рядом до завершения доставки.</p>
+        <p>ТОО «АЖАР 2022» — логистическая компания, которая строит работу на честности, прозрачности и пунктуальности. От расчёта маршрута до передачи груза клиенту — персональный подход и контроль на каждом этапе.</p>
         <div class="fact-row">
           <div class="fact"><div class="val">15</div><div class="lbl">лет опыта</div></div>
           <div class="fact"><div class="val">3</div><div class="lbl">направления</div></div>
@@ -1254,8 +1255,8 @@
     <div class="contact-stage">
       <div class="contact-intro">
         <div class="contact-index"><span>Связаться с AZHAR2022</span><b>24 / 7</b></div>
-        <h2>Получите <em>понятный расчёт</em></h2>
-        <p class="contact-lead">Укажите направление и расскажите о грузе. Мы уточним детали, подберём транспорт и предложим подходящий вариант перевозки.</p>
+        <h2>Рассчитаем <em>ваш маршрут</em></h2>
+        <p class="contact-lead">Расскажите, что нужно перевезти и куда. Мы уточним детали, подберём транспорт и вернёмся с понятным расчётом стоимости.</p>
         <div class="contact-channels">
           <a class="contact-channel" href="https://wa.me/77011700006" target="_blank" rel="noopener">
             <span class="contact-channel-mark whatsapp-mark" aria-hidden="true"><svg class="whatsapp-icon" viewBox="0 0 16 16" focusable="false"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.93 7.93 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607M7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.25a6.568 6.568 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.558 6.558 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.629.775-.116.133-.232.148-.43.05-1.17-.578-1.94-1.033-2.713-2.363-.205-.353.205-.329.59-1.096.065-.133.033-.247-.016-.346-.05-.099-.445-1.075-.611-1.47-.161-.389-.326-.336-.445-.342-.116-.008-.247-.008-.38-.008a.729.729 0 0 0-.528.247c-.182.197-.691.676-.691 1.646s.708 1.91.807 2.043c.099.133 1.392 2.126 3.374 2.984.471.205.84.326 1.129.417.475.152.904.13 1.245.08.38-.058 1.17-.48 1.336-.943.164-.464.164-.86.116-.943-.05-.083-.182-.133-.38-.232"/></svg></span>
@@ -1274,7 +1275,7 @@
       <div class="contact-form-shell">
         <div class="contact-form-head">
           <span class="contact-form-number">01</span>
-          <div><h3>Начнём с деталей</h3><p>Оставьте контакты и маршрут — мы свяжемся с вами для расчёта.</p></div>
+          <div><h3>Короткая заявка</h3><p>Три поля — и мы сможем начать расчёт.</p></div>
         </div>
         <form onsubmit="return sendRequest(event, this);">
           <div class="field">
@@ -1290,8 +1291,8 @@
             <textarea id="f-msg" name="message" rows="3" placeholder="Что нужно перевезти, откуда и куда"></textarea>
           </div>
           <div class="form-actions">
-            <button class="btn contact-submit" type="submit"><span class="action-mark whatsapp-mark" aria-hidden="true">↗</span> Запросить расчёт</button>
-            <button class="btn contact-mail" type="button" onclick="sendRequestEmail(this.form)"><span class="action-mark">@</span> Отправить на почту</button>
+            <button class="btn contact-submit" type="submit"><span class="action-mark whatsapp-mark" aria-hidden="true">↗</span> Получить расчёт</button>
+            <button class="btn contact-mail" type="button" onclick="sendRequestEmail(this.form)"><span class="action-mark">@</span> По почте</button>
           </div>
           <div class="form-note">Заявка откроется в выбранном вами канале связи.</div>
         </form>
